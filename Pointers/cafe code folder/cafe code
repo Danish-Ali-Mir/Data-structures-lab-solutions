@@ -1,0 +1,34 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int Espresso=200;
+	int Latte=500;
+	int Cappuccino=900;
+	
+	int EsQ,LaQ,CaQ;
+	
+	cout<<"enter number of espresso you want ."<<endl;
+	cin>>EsQ;
+	
+	cout<<"enter numnber of latte you want ."<<endl;
+	cin>>LaQ;
+	
+	cout<<"enter number of cappuccino you want ."<<endl;
+	cin>>CaQ;
+	
+	int *ptrE_price = &Espresso;
+	int *ptrL_price = &Latte;
+	int *ptrC_price = &Cappuccino;
+	
+	int *ptrE_q = &EsQ;
+	int *ptrL_q = &LaQ;
+	int *ptrC_q = &CaQ;
+	
+	int total = (*ptrE_price * *ptrE_q) + (*ptrL_price * *ptrL_q) + (*ptrC_price * *ptrL_q); 
+	cout<<"your total bill = "<<total;
+	
+	return 0;
+}
