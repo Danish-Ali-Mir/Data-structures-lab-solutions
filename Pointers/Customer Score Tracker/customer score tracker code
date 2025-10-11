@@ -1,0 +1,35 @@
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main() {
+	int nplayers;
+	cout<<"enter the number of players ;";
+	cin>>nplayers;
+	
+	int *scores=(int*)calloc(nplayers,sizeof(int));
+	
+	if (scores == nullptr){
+		cout<<"memory allocation failed ;"<<endl;
+		
+		return 1;
+	}
+	
+	for (int i = 0;i < nplayers; i++){
+		cout<<"Enter score of player "<<(i+1)<<":";
+		cin>>scores[i];
+	}
+	
+	cout<<" end of the tournament scores ;\n";
+	
+	for (int i=0; i<nplayers; i++){
+		cout<<"player "<<(i + 1)<<"score : "<<scores[i]<<endl;
+	}
+	
+	free(scores);
+	scores=nullptr;
+	
+	return 0;
+}
