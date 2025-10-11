@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	
+	int num;
+	cout<<"enter the number of participants :"<<endl;
+	cin>>num;
+	
+	int *attendance = (int*)calloc(num,sizeof(int));
+	
+	if (attendance == NULL){
+		cout<<"memory allocation failed ;";
+		
+		return 1;
+	}
+	
+	int presentNum;
+	cout<<"enter the number of student present :"<<endl;
+	cin>>presentNum;
+	
+	cout<<"enter the numbers of students who are present 1 to "<<num<<endl;
+	
+	for (int i=0; i < presentNum;i++){
+		int index;
+		cin>>index;
+		if (index >= 1 && index <= num){
+			attendance[index -1]=1;
+		}
+		else{
+			cout<<"invalid participant number :"<<index<<endl;
+		}
+	}
+	
+	cout<<"\nFinal attendance register :"<<endl;
+	for(int i=0; i<num; i++){
+		cout<<"participant "<<(i+1)<<":"<<(attendance[i] == 1 ? "present" : "Absent")<<endl;
+
+	}
+	
+	free(attendance);
+	attendance=nullptr;
+	
+	return 0;
+}
