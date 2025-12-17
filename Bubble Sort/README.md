@@ -79,7 +79,3 @@ This program is designed for academic and learning purposes to demonstrate:
 * Performance measurement using modern C++ features
 
 ---
-
-## Author
-
-Student Project
