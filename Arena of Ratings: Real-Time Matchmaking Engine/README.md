@@ -1,6 +1,6 @@
 ArenaBST – Player Management System
 
-Author: [Your Name]
+Author: DANISH ALI MIR
 Language: C++
 Description:
 ArenaBST is a C++ program implementing a Binary Search Tree (BST) to manage players in an arena, where each player has a unique rating, name, and health points (HP). The program supports joining/leaving the arena, updating HP, querying player statistics, finding nearest opponents, and various BST-based operations efficiently.
